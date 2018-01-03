@@ -46,7 +46,7 @@ public class Game {
             char[] guessArray = userInput.toLowerCase().toCharArray();
 
             // Test if the user didn't typed all the characters on the keyboard.
-            if (guessArray.length > (totalChars() / 5)) {
+            if (guessArray.length > 3) {
                 System.out.println("Character limit exceeded!");
                 System.out.println("Enter a character:");
                 continue;
@@ -102,7 +102,7 @@ public class Game {
     private void startMessage() {
         System.out.println(mBuilder.getStringBuilder() + " # " + "Total characters: "
                 + totalChars() + " | " + "Total tries: " + turn);
-        System.out.println("Type '?' to Quit. | " + (totalChars() / 5) + " character/s at a time");
+        System.out.println("Type '?' to Quit. | " + 3 + " character/s at a time");
         System.out.println("Can you guess the Movie name?");
         System.out.println("Enter a letter:");
     }
